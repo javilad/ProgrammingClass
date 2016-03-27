@@ -1,4 +1,4 @@
-package Enterprise.Class;
+package Enterprise.Classes;
 
 import java.util.Date;
 import Enterprise.Interfaces.IEmpleadoProfesional;
@@ -92,6 +92,7 @@ public class EmpleadoProfesional extends Empleado implements IEmpleadoProfesiona
 	 *            The date of entry
 	 * @return Result of the operation
 	 */
+	@Override
 	public boolean markEntry(Date dateEntry) {
 		boolean _result = false;
 		if (dateEntry != null) {
@@ -109,6 +110,7 @@ public class EmpleadoProfesional extends Empleado implements IEmpleadoProfesiona
 	 *            The date of out
 	 * @return Result of the operation
 	 */
+	@Override
 	public boolean markOut(Date dateOut) {
 		boolean _result = false;
 		if (dateOut != null) {

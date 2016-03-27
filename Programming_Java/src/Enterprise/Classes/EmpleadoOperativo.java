@@ -1,6 +1,5 @@
-package Enterprise.Class;
+package Enterprise.Classes;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,18 +21,19 @@ public class EmpleadoOperativo extends Empleado {
 			int _salary, String _position, Date _entryDate, Date _departureDate) {
 		super(_identity, _name, _age, _sex, _phone, _streetAddress, _salary, _position, _entryDate, _departureDate);
 	}
-	
-	public EmpleadoOperativo(){
+
+	public EmpleadoOperativo() {
 	}
 
 	/**
 	 * Discount by Health's and Order's employee
 	 */
 	private int discountHealth = 150;
-	public static Map<Integer, Integer> employeesOrder =  new HashMap<Integer, Integer>();
+	public static Map<Integer, Integer> employeesOrder = new HashMap<Integer, Integer>();
 
 	/**
 	 * Get employees with orders
+	 * 
 	 * @return
 	 */
 	public Map<Integer, Integer> getEmployeesOrder() {
@@ -42,19 +42,20 @@ public class EmpleadoOperativo extends Empleado {
 
 	/**
 	 * Set employee with order
+	 * 
 	 * @param employeeOrder
 	 */
 	public void setEmployeesOrder(int identity, int discountOrder) {
 		employeesOrder.put(identity, discountOrder);
 	}
-	
+
 	/**
 	 * Put the employees with orders
 	 */
-	private void putEmployeesOrder(){
+	private void putEmployeesOrder() {
 		employeesOrder.put(37378282, 1200);
 	}
-	
+
 	/**
 	 * Set a request for increase the salary of a employee
 	 *
@@ -68,8 +69,8 @@ public class EmpleadoOperativo extends Empleado {
 			int salaryFinal = this.get_salary() + value;
 
 			this.set_salary(salaryFinal);
-			System.out.println("El empleado [Operativo] " + this.get_name() + " solicitó un aumento de salario por: " + value
-					+ ". El salario final es: " + this.get_salary());
+			System.out.println("El empleado [Operativo] " + this.get_name() + " solicitó un aumento de salario por: "
+					+ value + ". El salario final es: " + this.get_salary());
 		}
 	}
 
@@ -82,7 +83,7 @@ public class EmpleadoOperativo extends Empleado {
 	public int calculateSalary() {
 		putEmployeesOrder();
 		int order = 0;
-		if (employeesOrder.get(this.get_identity()) > 0){
+		if (employeesOrder.get(this.get_identity()) > 0) {
 			order = 200;
 		}
 		return this.get_salary() - (discountHealth + order);
