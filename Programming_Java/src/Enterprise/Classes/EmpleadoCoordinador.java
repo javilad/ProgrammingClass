@@ -1,21 +1,22 @@
-package Enterprise.Class;
+package Enterprise.Classes;
 
 import java.util.Date;
 
 /**
- * CLASS EMPLEADOANALISTA
+ * {Name of This Class}
  *
- * Entity EmpleadoAnalista that inherited of Empleado
+ * {Purpose of This Class}
  *
+ * {Other Notes Relating to This Class (Optional)}
  *
- * $LastChangedRevision: 25/03/2016 $LastChangedDate: 25/03/2016
+ * $LastChangedRevision: $ $LastChangedDate: $
  */
-public class EmpleadoAnalista extends Empleado {
+public class EmpleadoCoordinador extends Empleado {
 
 	/**
 	 * CONSTRUCT CLASS
 	 **/
-	public EmpleadoAnalista(int _identity, String _name, int _age, char _sex, int _phone, String _streetAddress,
+	public EmpleadoCoordinador(int _identity, String _name, int _age, char _sex, int _phone, String _streetAddress,
 			int _salary, String _position, Date _entryDate, Date _departureDate) {
 		super(_identity, _name, _age, _sex, _phone, _streetAddress, _salary, _position, _entryDate, _departureDate);
 	}
@@ -33,8 +34,8 @@ public class EmpleadoAnalista extends Empleado {
 			int salaryFinal = this.get_salary() + value;
 
 			this.set_salary(salaryFinal);
-			System.out.println("El empleado [Analista] " + this.get_name()
-					+ " solicitó un aumento de salario por: " + value + ". El salario final es: " + this.get_salary());
+			System.out.println("El empleado [Coordinador] " + this.get_name() + " solicitó un aumento de salario por: "
+					+ value + ". El salario final es: " + this.get_salary());
 		}
 	}
 

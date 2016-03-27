@@ -1,16 +1,13 @@
 package Enterprise.Main;
 
-import java.util.ArrayList;
 import java.util.Date;
 
-import Enterprise.Class.Empleado;
-import Enterprise.Class.EmpleadoOperativo;
-import Enterprise.Class.EmpleadoOutSourcing;
-import Enterprise.Class.EmpleadoProfesional;
+import Enterprise.Classes.Empleado;
+import Enterprise.Classes.EmpleadoOperativo;
+import Enterprise.Classes.EmpleadoOutSourcing;
+import Enterprise.Classes.EmpleadoProfesional;
 
 public class Main {
-
-	public static ArrayList<Empleado> employees = new ArrayList<Empleado>();
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
