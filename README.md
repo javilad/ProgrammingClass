@@ -1,7 +1,7 @@
 Este ejemplo permite evaluar los conceptos de heriencia y polimorfismo en Java. 
 
 ## Heriencia
-La Herencia es uno de los 4 pilares de la programación orientada a objetos (POO) junto con la Abstracción, Encapsulación y Polimorfismo. Respecto a la herencia se han dado muchas definiciones como por ejemplo la siguiente: "La herencia es un mecanismo que permite la definición de una clase a partir de la definición de otra ya existente. 
+La Herencia es uno de los 4 pilares de la programación orientada a objetos (POO) junto con la Abstracción, Encapsulación y Polimorfismo. Respecto a la herencia se han dado muchas definiciones como por ejemplo la siguiente: "La herencia es un mecanismo que permite la definición de una clase a partir de la definición de otra ya existente". 
 
 `public class EmpleadoProfesional extends Empleado`
 
