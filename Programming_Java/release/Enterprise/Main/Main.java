@@ -2,10 +2,10 @@ package Enterprise.Main;
 
 import java.util.Date;
 
-import Enterprise.Classes.Empleado;
-import Enterprise.Classes.EmpleadoOperativo;
-import Enterprise.Classes.EmpleadoOutSourcing;
-import Enterprise.Classes.EmpleadoProfesional;
+import Enterprise.Class.Empleado;
+import Enterprise.Class.EmpleadoOperativo;
+import Enterprise.Class.EmpleadoOutSourcing;
+import Enterprise.Class.EmpleadoProfesional;
 
 public class Main {
 

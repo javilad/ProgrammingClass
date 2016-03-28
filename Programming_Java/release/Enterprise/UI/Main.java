@@ -2,11 +2,6 @@ package Enterprise.UI;
 
 import java.awt.EventQueue;
 
-import Enterprise.Classes.Empleado;
-import Enterprise.Classes.EmpleadoOperativo;
-import Enterprise.Classes.EmpleadoOutSourcing;
-import Enterprise.Classes.EmpleadoProfesional;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -14,6 +9,11 @@ import javax.swing.JLabel;
 import javax.swing.JTextPane;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.StyledDocument;
+
+import Enterprise.Class.Empleado;
+import Enterprise.Class.EmpleadoOperativo;
+import Enterprise.Class.EmpleadoOutSourcing;
+import Enterprise.Class.EmpleadoProfesional;
 
 import java.awt.Font;
 import javax.swing.JSeparator;
