@@ -1,23 +1,59 @@
-package Enterprise.Classes;
+package Enterprise.Class;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * CLASS EMPLEADOANALISTA
+ * CLASS EMPLEADOOPERATIVO
  *
- * Entity EmpleadoAnalista that inherited of Empleado
+ * Entity EmpleadoOperativo that inherited of Empleado
  *
  *
  * $LastChangedRevision: 25/03/2016 $LastChangedDate: 25/03/2016
  */
-public class EmpleadoAnalista extends Empleado {
+public class EmpleadoOperativo extends Empleado {
 
 	/**
 	 * CONSTRUCT CLASS
 	 **/
-	public EmpleadoAnalista(int _identity, String _name, int _age, char _sex, int _phone, String _streetAddress,
+	public EmpleadoOperativo(int _identity, String _name, int _age, char _sex, int _phone, String _streetAddress,
 			int _salary, String _position, Date _entryDate, Date _departureDate) {
 		super(_identity, _name, _age, _sex, _phone, _streetAddress, _salary, _position, _entryDate, _departureDate);
+	}
+
+	public EmpleadoOperativo() {
+	}
+
+	/**
+	 * Discount by Health's and Order's employee
+	 */
+	private int discountHealth = 150;
+	public static Map<Integer, Integer> employeesOrder = new HashMap<Integer, Integer>();
+
+	/**
+	 * Get employees with orders
+	 * 
+	 * @return
+	 */
+	public Map<Integer, Integer> getEmployeesOrder() {
+		return employeesOrder;
+	}
+
+	/**
+	 * Set employee with order
+	 * 
+	 * @param employeeOrder
+	 */
+	public void setEmployeesOrder(int identity, int discountOrder) {
+		employeesOrder.put(identity, discountOrder);
+	}
+
+	/**
+	 * Put the employees with orders
+	 */
+	private void putEmployeesOrder() {
+		employeesOrder.put(37378282, 1200);
 	}
 
 	/**
@@ -33,7 +69,7 @@ public class EmpleadoAnalista extends Empleado {
 			int salaryFinal = this.get_salary() + value;
 
 			this.set_salary(salaryFinal);
-			System.out.println("El empleado [Analista] " + this.get_name() + " solicitó un aumento de salario por: "
+			System.out.println("El empleado [Operativo] " + this.get_name() + " solicitó un aumento de salario por: "
 					+ value + ". El salario final es: " + this.get_salary());
 		}
 	}
@@ -45,7 +81,12 @@ public class EmpleadoAnalista extends Empleado {
 	 */
 	@Override
 	public int calculateSalary() {
-		return this.get_salary();
+		putEmployeesOrder();
+		int order = 0;
+		if (employeesOrder.get(this.get_identity()) > 0) {
+			order = 200;
+		}
+		return this.get_salary() - (discountHealth + order);
 	}
 
 	/**
